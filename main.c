@@ -23,3 +23,14 @@ void init(void)
     NVIC_EN0_R = 0x40000000;           // Enable interrupt in NVIC for GPIO port F
 
 }
+
+// Main function
+int main(void)
+{
+    init();                            // Initialize GPIO and interrupts
+    GPIO_PORTF_DATA_R = 0x00;          // Turn off the red LED initially
+    while(1)
+    {
+        // Main loop, waiting for interrupt to occur
+    }
+}
