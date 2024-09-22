@@ -38,4 +38,8 @@ int main(void)
 // Interrupt handler for GPIO Port F
 void GPIO_Handler(void)
 {
+        GPIO_PORTF_DATA_R ^= 0x02;     // Toggle the red LED
+
+        GPIO_PORTF_ICR_R = 0x10;       // Clear the interrupt flag for PF4
+    
 }
