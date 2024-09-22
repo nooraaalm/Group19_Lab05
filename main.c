@@ -34,3 +34,8 @@ int main(void)
         // Main loop, waiting for interrupt to occur
     }
 }
+
+// Interrupt handler for GPIO Port F
+void GPIO_Handler(void)
+{
+}
